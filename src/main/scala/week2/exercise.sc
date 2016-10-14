@@ -20,7 +20,7 @@ object exercise {
   def averageDamp(f: Double => Double)(x: Double) = (x + f(x)) / 2
   sqrt(2)
   def sqrt2(x: Double) =
-    fixedPoint(y => averageDamp(z => x/z)(y))(1)
-  sqrt2(2)
+    fixedPoint(averageDamp(y => x/y))(1)
+  sqrt2(4)
 }
 
